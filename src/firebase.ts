@@ -13,6 +13,8 @@ const firebaseConfig = {
 };
 
 // Inicializar
+
 const app = initializeApp(firebaseConfig);
 const analytics = typeof window !== "undefined" ? getAnalytics(app) : null;
-export { app, analytics, getFirestore };
+const db = getFirestore(app);
+export { app, analytics, getFirestore, db };
